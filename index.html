@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Cãopanheiro - ONG de Adoção</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <div>
+      📧 meucaopanheiro@gmail.org | 📞 (61) 99999-9999
+    </div>
+    <div>
+      <a href="#" style="color:white; text-decoration:none;">Facebook</a> |
+      <a href="#" style="color:white; text-decoration:none;">Instagram</a>
+    </div>
+  </header>
+
+ <!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <h1>Meu Cãopanheiro 🐾</h1>
+  </div>
+
+  <!-- Botão hambúrguer -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Menu de links -->
+  <ul class="nav-links hide" id="nav-links">
+    <li><a href="index.html" class="active">Início</a></li>
+    <li><a href="adocao.html">Adoção</a></li>
+    <li><a href="cadastro.html">Cadastro</a></li>
+    <li><a href="projetos.html">Projetos</a></li>
+  </ul>
+
+  <a href="doeagora.html" class="btn-doar">Doe Agora</a>
+</nav>
+
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h2>Dê um Lar, Salve uma Vida 🐶🐱</h2>
+      <p>Resgate, amor e adoção responsável — junte-se a nós e faça parte dessa causa!</p>
+      <a href="cadastro.html" class="btn-primario">Quero Adotar</a>
+      <a href="adocao.html" class="btn-secundario">Ver Animais</a>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre"> 
+    <div class="animal-card">
+      <h2>Quem Somos</h2>
+      <p>
+        Somos uma ONG dedicada ao resgate, tratamento e adoção de animais em situação de vulnerabilidade. 
+        Desde 2015, já ajudamos mais de 2.000 cães e gatos a encontrarem lares amorosos. 
+        Buscamos trazer amor e dignidade para aqueles que não podem gritar por socorro.
+      </p>
+    </div>
+  </section>
+
+  <!-- Perfis e Funcionalidades -->
+  <section id="perfis">
+    <h2>Perfis e Funcionalidades 🧩</h2>
+    <div class="grid">
+      <div class="perfil-card">
+        <h3>Administrador da ONG</h3>
+        <p>Gerencia informações institucionais, cadastra e edita projetos, acompanha métricas de engajamento e gerencia voluntários e doações.</p>
+      </div>
+
+      <div class="perfil-card">
+        <h3>Voluntário</h3>
+        <p>Descobre oportunidades de voluntariado, se candidata a projetos, acompanha histórico de participação e compartilha experiências.</p>
+      </div>
+
+      <div class="perfil-card">
+        <h3>Doador / Apoiador</h3>
+        <p>Conhece projetos e seus impactos, realiza doações on-line, acompanha a aplicação de recursos e recebe relatórios de transparência.</p>
+      </div>
+
+      <div class="perfil-card">
+        <h3>Visitante</h3>
+        <p>Conhece a organização e seus projetos, acessa informações de contato, visualiza a galeria de atividades e compartilha conteúdos nas redes sociais.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doe agora -->
+ <section id="doeagora">
+  <div class="doe-card">
+    <div class="doe-content">
+      <h2>Doe Agora ❤️</h2>
+      <p>Sua contribuição ajuda nossos animais a terem alimentação, abrigo e cuidados veterinários.</p>
+      <a href="doeagora.html" class="btn-doar">Fazer Doação</a>
+    </div>
+  </div>
+</section>
+
+<section id="doe">
+  <h2>Progresso das Doações</h2>
+  <div class="progress-container">
+    <div class="progress-bar">65%</div>
+  </div>
+</section>
+
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>© 2025 Meu Cãopanheiro. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+// Inicialmente escondido no desktop também
+navLinks.classList.add('hide');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('hide');
+});
+</script>
+
+</html>

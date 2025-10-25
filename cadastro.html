@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro para Adoção - Meu Cãopanheiro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Topbar -->
+   <header class="topbar">
+    <div>
+      📧 meucaopanheiro@gmail.org | 📞 (61) 99999-9999
+    </div>
+    <div>
+      <a href="#" style="color:white; text-decoration:none;">Facebook</a> |
+      <a href="#" style="color:white; text-decoration:none;">Instagram</a>
+    </div>
+  </header>
+
+ <!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <h1>Meu Cãopanheiro 🐾</h1>
+  </div>
+
+  <!-- Botão hambúrguer -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Menu de links -->
+  <ul class="nav-links hide" id="nav-links">
+    <li><a href="index.html" class="active">Início</a></li>
+    <li><a href="adocao.html">Adoção</a></li>
+    <li><a href="cadastro.html">Cadastro</a></li>
+    <li><a href="projetos.html">Projetos</a></li>
+  </ul>
+
+  <a href="doeagora.html" class="btn-doar">Doe Agora</a>
+</nav>
+
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section class="section">
+      <h2>Cadastro para Adoção 🐾</h2>
+
+      <!-- ALERTA -->
+<div class="alert alert-success" id="alertSuccess">
+  Cadastro realizado com sucesso!
+  <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast">Usuário cadastrado com sucesso!</div>
+
+
+      <form class="form" action="#" method="post">
+        <label for="nome">Nome completo:</label>
+        <input id="nome" type="text" placeholder="Seu nome" required>
+
+        <label for="email">Email:</label>
+        <input id="email" type="email" placeholder="seuemail@email.com" required>
+
+        <label for="telefone">Telefone:</label>
+        <input id="telefone" type="tel" placeholder="(xx) xxxxx-xxxx" required>
+
+        <label for="cpf">Cpf:</label>
+        <input id="cpf" type="text" placeholder="000.000.000-00" required>
+              
+
+        <label for="endereco">Endereço:</label>
+        <input id="endereco" type="text" placeholder="quadra,numero,bairro" required>
+
+        <label for="cep">Cep:</label>
+        <input id="cep" type="text" placeholder="00000-000" required>
+
+        <label for="cidade">Cidade:</label>
+        <input id="cidade" type="text" placeholder="Sua cidade" required>
+
+        <label for="estado">Estado:</label>
+        <select id="estado" required>
+          <option value="">Selecione</option>
+          <option>AC</option>
+          <option>AL</option>
+          <option>AP</option>
+          <option>AM</option>
+          <option>BA</option>
+          <option>CE</option>
+          <option>DF</option>
+          <option>ES</option>
+          <option>GO</option>
+          <option>MA</option>
+          <option>MT</option>
+          <option>MS</option>
+          <option>MG</option>
+          <option>PA</option>
+          <option>PB</option>
+          <option>PR</option>
+          <option>PE</option>
+          <option>PI</option>
+          <option>RJ</option>
+          <option>RN</option>
+          <option>RS</option>
+          <option>RO</option>
+          <option>RR</option>
+          <option>SC</option>
+          <option>SP</option>
+          <option>SE</option>
+          <option>TO</option>
+          </select>
+          
+        <label for="animal">Animal que deseja adotar:</label>
+        <select id="animal" required>
+          <option value="">Selecione</option>
+          <option>Thor</option>
+          <option>Luna</option>
+          <option>Rex</option>
+          <option>Loki</option>
+          <option>Max</option>
+          <option>Josefa</option>
+       </select>
+
+        <label for="motivo">Por que deseja adotar?</label>
+        <textarea id="motivo" rows="4" placeholder="Fale um pouco sobre você..." required></textarea>
+
+        <button type="submit" class="btn-primario">Enviar Cadastro</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>&copy; 2025 Meu Cãopanheiro | ONG de Adoção Responsável</p>
+  </footer>
+
+</body>
+
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+// Inicialmente escondido no desktop também
+navLinks.classList.add('hide');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('hide');
+});
+</script>
+
+
+</html>

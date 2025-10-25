@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos Sociais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="topbar">
+    <div>
+      📧 meucaopanheiro@gmail.org | 📞 (61) 99999-9999
+    </div>
+    <div>
+      <a href="#" style="color:white; text-decoration:none;">Facebook</a> |
+      <a href="#" style="color:white; text-decoration:none;">Instagram</a>
+    </div>
+  </header>
+
+   <!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <h1>Meu Cãopanheiro 🐾</h1>
+  </div>
+
+  <!-- Botão hambúrguer -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Menu de links -->
+  <ul class="nav-links hide" id="nav-links">
+    <li><a href="index.html" class="active">Início</a></li>
+    <li><a href="adocao.html">Adoção</a></li>
+    <li><a href="cadastro.html">Cadastro</a></li>
+    <li><a href="projetos.html">Projetos</a></li>
+  </ul>
+
+  <a href="doeagora.html" class="btn-doar">Doe Agora</a>
+</nav>
+
+
+
+  <!-- Conteúdo principal -->
+  <main>
+    <!-- Seção de Adoção -->
+    <section id="adocao">
+      <h2>Animais Disponíveis para Adoção ❤️</h2>
+      <div class="grid">
+
+        <div class="animal-card">
+          <img src="https://i.pinimg.com/736x/9f/be/b3/9fbeb35c3461ea179628f1f496d65fec.jpg" alt="Cachorro Thor">
+          <h3>Thor</h3>
+          <p>3 anos | Vacinado | Porte médio</p>
+          <a href="cadastro.html" class="btn-primario">Adotar</a>
+        </div>
+
+        <div class="animal-card">
+          <img src="https://i.pinimg.com/736x/8b/70/68/8b7068220803eaea94fe5d5c83f48645.jpg" alt="Gato Luna">
+          <h3>Luna</h3>
+          <p>2 anos | Castrada | Muito dócil</p>
+          <a href="cadastro.html" class="btn-primario">Adotar</a>
+        </div>
+
+        <div class="animal-card">
+          <img src="https://i.pinimg.com/736x/32/e2/c3/32e2c35b9993ae762218562ba404b042.jpg" alt="Cachorro Rex">
+          <h3>Rex</h3>
+          <p>1 ano | Cheio de energia | Porte grande</p>
+          <a href="cadastro.html" class="btn-primario">Adotar</a>
+        </div>
+
+        <div class="animal-card">
+          <img src="https://s2-oglobo.glbimg.com/vkKo3Ha_Nsuzgj1iPzAfMEs9hZ8=/0x0:964x1280/888x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2024/E/I/5j92AdQuec0DhZ1bALJg/whatsapp-image-2024-07-18-at-16.32.32-1-.jpeg" alt="Cachorro Loki">
+          <h3>Loki</h3>
+          <p>6 meses | Vacinado | Porte médio</p>
+          <a href="cadastro.html" class="btn-primario">Adotar</a>
+        </div>
+
+        <div class="animal-card">
+          <img src="https://grudiario.com.br/wp-content/uploads/2024/02/cachorro-para-adocao.jpeg" alt="Cachorro Max">
+          <h3>Max</h3>
+          <p>5 anos | Castrado | Muito dócil</p>
+          <a href="cadastro.html" class="btn-primario">Adotar</a>
+        </div>
+
+        <div class="animal-card">
+          <img src="https://static.wixstatic.com/media/e2e4ef_5b261f8d855045fba5f61882c8e9e8e3~mv2.jpg/v1/fill/w_648,h_636,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Loiro-gato-para-adocao_PatinhasCarentes_.jpg" alt="Gato Josefa">
+          <h3>Josefa</h3>
+          <p>1 ano | Bem carinhosa | Castrada</p>
+          <a href="cadastro.html" class="btn-primario">Adotar</a>
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>© 2025 Meu Cãopanheiro. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+// Inicialmente escondido no desktop também
+navLinks.classList.add('hide');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('hide');
+});
+</script>
+
+</html>

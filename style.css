@@ -1,0 +1,558 @@
+
+
+/* ================= DESIGN SYSTEM =================== */
+
+:root {
+  /* Paleta de cores */
+  --cor-primaria: #085381;
+  --cor-secundaria: #0c73b3;
+  --cor-terciaria: #686bfc;
+  --cor-neutra-clara: #f8f8f8;
+  --cor-neutra-media: #adb5bd;
+  --cor-neutra-escura: #343a40;
+  --cor-sucesso: #198754;
+  --cor-erro: #dc3545;
+  --cor-alerta: #ffc107;
+
+  /* Tipografia */
+  --fonte-principal: "Poppins", sans-serif;
+  --fonte-xs: 12px;
+  --fonte-sm: 14px;
+  --fonte-md: 16px;
+  --fonte-lg: 20px;
+  --fonte-xl: 28px;
+
+  /* Espaçamento modular */
+  --esp-1: 8px;
+  --esp-2: 16px;
+  --esp-3: 24px;
+  --esp-4: 32px;
+  --esp-5: 48px;
+  --esp-6: 64px;
+}
+
+
+/* ================== RESET & BASE ==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fonte-principal);
+}
+
+body {
+  background-color: var(--cor-neutra-clara);
+  color: var(--cor-neutra-escura);
+  line-height: 1.6;
+}
+
+
+/* ==================== TOPBAR ======================== */
+
+.topbar {
+  background-color: #074469;
+  color: #ece7e7;
+  padding: var(--esp-1) var(--esp-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fonte-sm);
+}
+
+
+/* ==================== NAVBAR ======================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: var(--cor-primaria);
+  display: flex;
+  align-items: center;
+  padding: var(--esp-2) var(--esp-5);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.logo {
+  flex: 1;
+}
+
+.logo h1 {
+  color: white;
+  font-size: 1.6em;
+}
+
+.navbar ul {
+  display: flex;
+  gap: var(--esp-3);
+  list-style: none;
+  margin-left: auto;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  text-decoration: underline;
+  color: #dcefff;
+}
+
+.btn-doar {
+  background-color: var(--cor-secundaria);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  margin-left: var(--esp-2);
+}
+
+.btn-doar:hover {
+  background-color: white;
+  color: var(--cor-primaria);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+
+/* ====================== HERO ======================== */
+
+.hero {
+  background: url("https://i.pinimg.com/736x/6d/99/66/6d996602b751a2366c2835a64131671e.jpg") no-repeat center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+    color: white;
+  text-align: center;
+
+}
+
+.hero-content h2 {
+  font-size: var(--fonte-xl);
+  margin-bottom: var(--esp-2);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.hero-content p {
+  font-size: var(--fonte-md);
+  margin-bottom: var(--esp-3);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+
+/* ===================== BOTÕES ======================= */
+
+.btn-primario,
+.btn-secundario {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 22px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primario {
+  background-color: var(--cor-primaria);
+  color: white;
+}
+
+.btn-primario:hover {
+  filter: brightness(1.1);
+}
+
+.btn-secundario {
+  background-color: white;
+  color: var(--cor-primaria);
+  border: 2px solid var(--cor-primaria);
+}
+
+.btn-secundario:hover {
+  background-color: var(--cor-primaria);
+  color: white;
+}
+
+
+/* =================== SEÇÕES ========================= */
+
+section {
+  padding: var(--esp-5) var(--esp-2);
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+section h2 {
+  color: var(--cor-primaria);
+  margin-bottom: var(--esp-2);
+  font-size: var(--fonte-xl);
+}
+
+section p {
+  color: var(--cor-neutra-escura);
+  font-size: var(--fonte-md);
+  margin-bottom: var(--esp-3);
+}
+
+
+/* ===================== GRID CARDS =================== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--esp-3);
+  margin-top: var(--esp-3);
+}
+
+.animal-card,
+.perfil-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: var(--esp-3);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.animal-card:hover,
+.perfil-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.animal-card img,
+.perfil-card img {
+  width: 90%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: var(--esp-3);
+}
+
+
+/* =================== FORMULÁRIOS =================== */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+  max-width: 500px;
+  margin: auto;
+  text-align: left;
+}
+
+.form label {
+  font-weight: 500;
+  color: var(--cor-neutra-escura);
+}
+
+.form input,
+.form select,
+.form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.form button {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  background-color: #064d6f;
+}
+
+
+/* ==================== FORMAS DE DOAR ================= */
+#formas-de-doar {
+  text-align: center;
+  padding: var(--esp-6) var(--esp-2);
+  background-color: white;
+}
+
+.formas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--esp-3);
+}
+
+.forma {
+  background: #ffe4d1;
+  border-radius: 12px;
+  padding: var(--esp-3);
+  width: 280px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.forma:hover {
+  transform: translateY(-5px);
+}
+
+.forma h3 {
+  color: var(--cor-primaria);
+}
+
+/* ==================== DOE CARD ====================== */
+.doe-card {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaL-nuF56B4cZEKtGbLroD8Zd6d-efatR0lA&s');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  min-height: 250px;
+  margin: var(--esp-5) auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(8,83,129,0.6);
+}
+
+.doe-card .doe-content {
+  text-align: center;
+  color: white;
+  padding: var(--esp-3);
+  max-width: 600px;
+}
+
+.doe-card .doe-content h2 {
+  font-size: var(--fonte-xl);
+  margin-bottom: var(--esp-2);
+}
+
+.doe-card .doe-content p {
+  font-size: var(--fonte-md);
+  margin-bottom: var(--esp-3);
+}
+
+.doe-card .doe-content .btn-doar {
+  background-color: var(--cor-primaria);
+  color: #f7f7f7;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.doe-card .doe-content .btn-doar:hover {
+  background-color: var(--cor-terciaria);
+  transform: scale(1.05);
+}
+
+
+/* ==================== ARCO-ÍRIS HERO ================= */
+.arco-iris-hero {
+  background: url('imagens/doguinho.png') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: var(--esp-6) var(--esp-2);
+}
+
+
+/* ====================== RODAPÉ ===================== */
+footer {
+  background-color: #074469;
+  color: white;
+  text-align: center;
+  padding: var(--esp-2);
+  font-size: var(--fonte-sm);
+  margin-top: var(--esp-5);
+}
+
+/* ====================== RESPONSIVO ================== */
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .formas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    padding: var(--esp-5) var(--esp-2);
+  }
+}
+
+
+/* ==================== PROGRESS BAR ================== */
+.progress-container {
+  width: 100%;
+  max-width: 600px;
+  height: 30px;
+  background-color: #ddd;
+  border-radius: 16px;
+  margin: var(--esp-3) auto;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: var(--cor-primaria);
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  font-weight: bold;
+  border-radius: 15px 0 0 15px;
+  animation: fillRightToLeft 2s forwards;
+}
+
+@keyframes fillRightToLeft {
+  from { width: 0; }
+  to { width: 65%; }
+}
+
+/* ================== ALERTS ================== */
+.alert {
+  padding: var(--esp-2);
+  margin: var(--esp-2) 0;
+  border-radius: 8px;
+  position: relative;
+  font-weight: 500;
+  color: white;
+  display: none; 
+}
+
+.alert-success { background-color: var(--cor-sucesso); }
+.alert-error { background-color: var(--cor-erro); }
+.alert-info { background-color: var(--cor-alerta); }
+
+.alert .close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ================== TOASTS ================== */
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: var(--cor-neutra-escura);
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  padding: var(--esp-3);
+  position: fixed;
+  bottom: var(--esp-4);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ================== MODALS ================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1002;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal:target {
+  display: block;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: var(--esp-4);
+  width: 50%;
+  border-radius: 12px;
+  position: relative;
+  text-align: center;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--cor-neutra-escura);
+}
+/* ================= HAMBURGUER ================= */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-left: auto;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+/* MENU DE LINKS */
+.nav-links {
+  display: flex;
+  gap: var(--esp-3);
+}
+
+/* MENU ESCONDIDO QUANDO USAR HAMBURGUER */
+.nav-links.hide {
+  display: none;
+}
+
+/* RESPONSIVO */
+@media (max-width: 992px) {
+  .nav-links {
+    position: absolute;
+    top: 70px; /* altura da navbar */
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--cor-primaria);
+    padding: var(--esp-3) 0;
+    text-align: center;
+    gap: var(--esp-3);
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+}

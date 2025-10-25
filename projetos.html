@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos Sociais - Meu Cãopanheiro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+   <header class="topbar">
+    <div>
+      📧 meucaopanheiro@gmail.org | 📞 (61) 99999-9999
+    </div>
+    <div>
+      <a href="#" style="color:white; text-decoration:none;">Facebook</a> |
+      <a href="#" style="color:white; text-decoration:none;">Instagram</a>
+    </div>
+  </header>
+
+   <!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <h1>Meu Cãopanheiro 🐾</h1>
+  </div>
+
+  <!-- Botão hambúrguer -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Menu de links -->
+  <ul class="nav-links hide" id="nav-links">
+    <li><a href="index.html" class="active">Início</a></li>
+    <li><a href="adocao.html">Adoção</a></li>
+    <li><a href="cadastro.html">Cadastro</a></li>
+    <li><a href="projetos.html">Projetos</a></li>
+  </ul>
+
+  <a href="doeagora.html" class="btn-doar">Doe Agora</a>
+</nav>
+  <!-- Conteúdo principal -->
+  <main>
+    <section id="projetos">
+      <h2>Projetos Sociais 🐕‍🦺</h2>
+      <div class="grid">
+
+        <div class="perfil-card">
+          <img src="https://i.pinimg.com/736x/db/3b/52/db3b52402649d8bb56e6d691ad17ca0d.jpg" alt="Feira de adoção">
+          <h3>Feira de Adoção</h3>
+          <p>Organizamos feiras regulares para conectar cães e gatos resgatados com famílias amorosas e responsáveis.</p>
+        </div>
+
+        <div class="perfil-card">
+          <img src="https://www.marica.rj.gov.br/wp-content/uploads/2023/10/53274713474_71182646c4_k.jpg" alt="Campanha de vacinação e vermifugação">
+          <h3>Campanha de Vacinação e Vermifugação</h3>
+          <p>Oferecemos vacinas e vermífugos gratuitos para animais de famílias de baixa renda, promovendo saúde e prevenção.</p>
+        </div>
+
+        <div class="perfil-card">
+          <img src="https://abcdoabc.com.br/wp-content/uploads/2024/01/CampanhaCastracaoAnimal-.jpg" alt="Campanha de castração">
+          <h3>Campanha de Castração</h3>
+          <p>Realizamos mutirões de castração para controle populacional e melhoria da qualidade de vida dos animais.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <p>&copy; 2025 Meu Cãopanheiro | Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="login.js"></script>
+</body>
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+// Inicialmente escondido no desktop também
+navLinks.classList.add('hide');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('hide');
+});
+</script>
+</html>
