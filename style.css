@@ -8,7 +8,7 @@
   --cor-secundaria: #0c73b3;
   --cor-terciaria: #686bfc;
   --cor-neutra-clara: #f8f8f8;
-  --cor-neutra-media: #adb5bd;
+  --cor-neutra-media: #bdc6cf;
   --cor-neutra-escura: #343a40;
   --cor-sucesso: #198754;
   --cor-erro: #dc3545;
@@ -117,7 +117,7 @@ body {
 .btn-doar:hover {
   background-color: white;
   color: var(--cor-primaria);
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 8px rgba(184, 50, 50, 0.4);
 }
 
 
@@ -125,7 +125,9 @@ body {
 
 .hero {
   background: url("https://i.pinimg.com/736x/6d/99/66/6d996602b751a2366c2835a64131671e.jpg") no-repeat center/cover;
-  height: 100vh;
+   width: 100%;
+  max-width: 2000px;
+  min-height: 1000px;
   display: flex;
   justify-content: center;
   margin: auto;
@@ -133,17 +135,21 @@ body {
   text-align: center;
 
 }
-
+  
 .hero-content h2 {
-  font-size: var(--fonte-xl);
+ font-size: 3.2rem;
   margin-bottom: var(--esp-2);
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  text-shadow: 2px 2px 4px rgba(252, 252, 252, 0.4);
+    margin-top: 320px; /* empurra o conteúdo pra baixo (ajuste conforme quiser) */
+  
 }
 
 .hero-content p {
-  font-size: var(--fonte-md);
+ font-size: 2.0rem;
   margin-bottom: var(--esp-3);
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.4);
+  color: rgb(250, 247, 247);
+    
 }
 
 
@@ -152,7 +158,7 @@ body {
 .btn-primario,
 .btn-secundario {
   display: inline-block;
-  margin: 5px;
+  margin: 15px;
   padding: 10px 22px;
   border-radius: 25px;
   text-decoration: none;
@@ -162,7 +168,7 @@ body {
 
 .btn-primario {
   background-color: var(--cor-primaria);
-  color: white;
+  color: rgb(250, 247, 247);
 }
 
 .btn-primario:hover {
@@ -364,7 +370,9 @@ section p {
 .arco-iris-hero {
   background: url('imagens/doguinho.png') no-repeat center center;
   background-size: cover;
-  min-height: 100vh;
+   width: 100%;
+  max-width: 2000px;
+  min-height: 1000px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
